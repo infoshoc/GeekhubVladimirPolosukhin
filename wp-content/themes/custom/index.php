@@ -1,7 +1,5 @@
 ﻿<?php get_header(); ?>
 
-<?php 
-	
-?>
+<?php echo 'index' ?>
 
 <?php get_footer(); ?>

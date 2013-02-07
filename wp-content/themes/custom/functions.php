@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 function get_navigation(){
 	return '<ul class="navigation">
