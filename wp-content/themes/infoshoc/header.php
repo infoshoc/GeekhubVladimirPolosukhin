@@ -9,12 +9,12 @@
 <body class="main">
 <div class="wrapper">
 	<div class="header">
-		<h1><a href="index.html"><img src="images/logo.png" alt="logo" /></a></h1>
+		<h1><a href="/"><img src="<?php echo get_template_directory_uri()?>/images/logo.png" alt="logo" /></a></h1>
 		<ul class="navigation">
-			<li class="active"><a href="index.html">главная</a></li>
-			<li><a href="about.html">о geekhub</a></li>
-			<li><a href="team.html">команда</a></li>
-			<li><a href="contact.html">контакты</a></li>
+			<li class="active"><a href="index.php">главная</a></li>
+			<li><a href="about.php">о geekhub</a></li>
+			<li><a href="team.php">команда</a></li>
+			<li><a href="contact.php">контакты</a></li>
 		</ul>
 		<ul class="social-list">
 			<li class="facebook-item"><a href="#"></a></li>
