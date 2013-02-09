@@ -1,16 +1,18 @@
 <?php 
 /*NAVIGATION*/
 function infoshoc_put_navigation(){
-	wp_list_pages( 
-		array(
-			'title_li' => '',
-		)); 
+	wp_page_menu(array(
+		'show_home' => 'Головна',
+		'menu_class' => 'navigation',
+	));
 }
 function infoshoc_put_body_class(){
 	if ( is_home() ) {
-		echo 'main';
-	} 
-	echo '';
+		return 'main';
+	}
+	global $post;
+	$class_name = preg_match ( "#^(\w+)\-page$#", $post->post_name, $matches );
+	return $matches[1];
 }
 
 /*STYLES*/

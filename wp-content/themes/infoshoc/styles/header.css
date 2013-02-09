@@ -35,10 +35,13 @@ h1 {
 /*----------------------------------------------------------------------------------*/
 /*----------------------------------NAVIGATION--------------------------------------*/
 /*----------------------------------------------------------------------------------*/
-.header .navigation {
+.header .navigation{
 	float: right;
 	overflow: hidden;	
 	padding: 47px 0 0;
+}
+.header .navigation ul {
+	overflow: hidden;
 }
 .navigation li {
 	float: left;
