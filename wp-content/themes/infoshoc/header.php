@@ -3,14 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Головна</title>
-<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/styles/reset.css" />
-<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/styles/default.css" />
-<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/styles/wrapper.css" />
-<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/styles/header.css" />
-<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/styles/content.css" />
-<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/styles/footer.css" />
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/script.js"></script>
+<?php wp_head() ?>
 </head>
 
 <body class="main">
