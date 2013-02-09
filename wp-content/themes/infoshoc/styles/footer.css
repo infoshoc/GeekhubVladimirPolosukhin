@@ -24,6 +24,6 @@
 .footer .navigation a{
 	font-size: 11px;
 }
-.footer .navigation .active a {
+.footer .navigation .current_page_item a {
 	color: #F85B4E;
 }

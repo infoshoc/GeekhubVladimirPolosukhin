@@ -1,5 +1,18 @@
 <?php 
-/*HEADER*/
+/*NAVIGATION*/
+function infoshoc_put_navigation(){
+	wp_list_pages( 
+		array(
+			'title_li' => '',
+		)); 
+}
+function infoshoc_put_body_class(){
+	if ( is_home() ) {
+		echo 'main';
+	} 
+	echo '';
+}
+
 /*STYLES*/
 add_action( 'wp_enqueue_scripts', 'infoshoc_enqueue_styles' );
 function infoshoc_enqueue_styles(){
@@ -16,4 +29,6 @@ function infoshoc_enqueue_styles(){
 	wp_enqueue_style ( 'content' );
 	wp_enqueue_style ( 'footer' );
 }
+
+
 ?>

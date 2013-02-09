@@ -50,13 +50,13 @@ h1 {
 	font-weight: bold;
 	color: #396375;
 }
-.header .navigation .active {
+.header .navigation .current_page_item {
 	background: url(../images/header-active-arrow.png) center bottom no-repeat;
 	height: 70px;
 }
-.main .header .navigation .active {
+.main .header .navigation .current_page_item {
 	background: none;
 }
-.header .navigation .active a {
+.header .navigation .current_page_item a {
 	color: #e21d5d;
 }

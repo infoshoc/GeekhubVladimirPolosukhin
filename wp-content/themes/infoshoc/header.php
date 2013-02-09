@@ -6,15 +6,17 @@
 <?php wp_head() ?>
 </head>
 
-<body class="main">
+<body class="<?php infoshoc_put_body_class(); ?>">
 <div class="wrapper">
 	<div class="header">
-		<h1><a href="/"><img src="<?php echo get_template_directory_uri()?>/images/logo.png" alt="logo" /></a></h1>
+		<h1><a href="/"><img src="<?php echo get_header_image()?>" alt="logo" /></a></h1>
 		<ul class="navigation">
 			<li class="active"><a href="index.php">главная</a></li>
+			<?php infoshoc_put_navigation(); ?>
+			<!--
 			<li><a href="about.php">о geekhub</a></li>
 			<li><a href="team.php">команда</a></li>
-			<li><a href="contact.php">контакты</a></li>
+			<li><a href="contact.php">контакты</a></li>-->
 		</ul>
 		<ul class="social-list">
 			<li class="facebook-item"><a href="#"></a></li>
