@@ -1,0 +1,62 @@
+.header {
+	overflow: hidden;
+}
+.main .header {
+	border-bottom: 1px solid #95A7B1;
+}
+
+h1 {
+	float: left;
+	padding: 19px 0 17px;
+}
+
+/*----------------------------------------------------------------------------------*/
+/*------------------------------------SOCIAL----------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.header .social-list {
+	overflow: hidden;	
+	padding: 45px 86px 39px 93px;
+}
+.header .social-list li {
+	float: left;
+	padding: 0 9px 0 0;
+}
+.header .social-list li a {
+	display: block;
+	width: 23px; height: 23px;
+}
+.header .social-list .facebook-item a {background: url(../images/social-icons-spirit.png);} .header .social-list .facebook-item a:hover {background-position: 0 bottom;}
+.header .social-list .vkontakte-item a {background: url(../images/social-icons-spirit.png) -23px top;} .header .social-list .vkontakte-item a:hover {background-position: -23px bottom;}
+.header .social-list .twitter-item a {background: url(../images/social-icons-spirit.png) -46px top;} .header .social-list .twitter-item a:hover {background-position: -46px bottom;}
+.header .social-list .youtube-item a {background: url(../images/social-icons-spirit.png) -69px top;} .header .social-list .youtube-item a:hover {background-position: -69px bottom;}
+.header .social-list .vimeo-item a {background: url(../images/social-icons-spirit.png) -92px top;} .header .social-list .vimeo-item a:hover {background-position: -92px bottom;}
+
+
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------NAVIGATION--------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.header .navigation {
+	float: right;
+	overflow: hidden;	
+	padding: 47px 0 0;
+}
+.navigation li {
+	float: left;
+	padding: 0 0 0 27px;
+}
+.navigation a {
+	text-transform: uppercase;
+	font-family: "PT Sans", sans-serif;
+	font-weight: bold;
+	color: #396375;
+}
+.header .navigation .active {
+	background: url(../images/header-active-arrow.png) center bottom no-repeat;
+	height: 70px;
+}
+.main .header .navigation .active {
+	background: none;
+}
+.header .navigation .active a {
+	color: #e21d5d;
+}
