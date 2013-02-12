@@ -2,6 +2,7 @@
 /*NAVIGATION*/
 function infoshoc_put_navigation(){
 	wp_page_menu(array(
+		'sort_column' => 'ID',
 		'show_home' => 'Головна',
 		'menu_class' => 'navigation',
 	));
