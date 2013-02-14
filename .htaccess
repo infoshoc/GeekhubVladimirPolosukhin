@@ -1,0 +1,4 @@
+Options +FollowSymLinks
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^yoursite\.com
+RewriteRule ^(.*)$ http://www.yoursite.com/$1 [R=permanent,L] . 
