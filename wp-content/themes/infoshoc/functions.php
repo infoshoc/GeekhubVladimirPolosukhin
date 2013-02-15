@@ -1,4 +1,5 @@
 <?php 
+add_theme_support( 'post-thumbnails' ); 
 /*NAVIGATION*/
 function infoshoc_put_navigation(){
 	wp_page_menu(array(
