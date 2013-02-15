@@ -13,8 +13,7 @@ function infoshoc_put_body_class(){
 		return 'main';
 	}
 	global $post;
-	$class_name = preg_match ( "#^(\w+)\-page$#", $post->post_name, $matches );
-	return $matches[1];
+	return $post->post_name;
 }
 
 /*STYLES*/

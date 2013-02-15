@@ -186,6 +186,7 @@
 }
 .about .content img {
 	margin: 0 0 0 35px;
+	float: left;
 }
 .about .content p {
 	margin: 0 35px 25px;
