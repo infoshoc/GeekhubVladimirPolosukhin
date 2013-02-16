@@ -1,5 +1,9 @@
 <?php 
-add_theme_support( 'post-thumbnails' ); 
+function infoshoc_theme_setup(){
+	add_theme_support( 'post-thumbnails' ); 
+}
+add_action( 'after_setup_theme', 'infoshoc_theme_setup' );
+
 /*NAVIGATION*/
 function infoshoc_put_navigation(){
 	wp_page_menu(array(

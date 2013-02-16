@@ -6,7 +6,7 @@
 if ( is_home() ) {
 	echo "GeekHub - отримай практичні знання у сфері IT";
 } else {
-	wp_title( "GeekHub" );
+	wp_title( "GeekHub - " );
 }
 ?></title>
 <?php wp_head() ?>

@@ -1,10 +1,28 @@
 <?php get_header()?>
 
 		<div class="status-block">
-			Реєстрація на другий сезон відкрита!
-			<a href="#" class="register-link"></a>
+		<?php
+			while ( have_posts() ){
+				the_post(); 
+				if ( $post->post_title == 'register-status' ) {
+					the_content();
+					break;
+				}
+			}
+		?>
 		</div>
-		<p class="description-txt"><strong>GeekHub</strong> — це проект, що надає можливість отримати практичні знання та навички в сфері розробки програмного забезпечення. На відміну від традиційної освіти, викладачі GeekHub працюють з новітніми технологіями у провідних софтверних компаніях, тому слухачі GeekHub отримують тільки актуальні знання. Якщо ти зацікавлений — запрошуємо ознайомитись з <a href="#">деталями проекту.</a></p>
+		<p class="description-txt">
+		<?php
+			while ( have_posts() ){
+				the_post(); 
+				if ( $post->post_title == 'description-geekhub' ) {
+					the_content();
+					break;
+				}
+			}
+		?>
+
+		</p>
 		<h2>Наші Курси</h2>
 		<ul class="courses-list">
 		<?php 
