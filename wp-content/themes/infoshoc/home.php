@@ -23,7 +23,6 @@
 			}
 		}
 		?>
-
 		</p>
 		<h2>Наші Курси</h2>
 		<ul class="courses-list">

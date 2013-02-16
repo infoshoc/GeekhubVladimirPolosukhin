@@ -17,10 +17,6 @@ if ( is_home() ) {
 	<div class="header">
 		<h1><a href="/"><img src="<?php echo get_template_directory_uri()?>/images/logo.png" alt="logo" /></a></h1>
 		<?php infoshoc_put_navigation(); ?>
-		<!--
-		<li><a href="about.php">о geekhub</a></li>
-		<li><a href="team.php">команда</a></li>
-		<li><a href="contact.php">контакты</a></li>-->
 		<ul class="social-list">
 			<li class="facebook-item"><a href="#"></a></li>
 			<li class="vkontakte-item"><a href="#"></a></li>

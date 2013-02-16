@@ -2,54 +2,26 @@
 
 		<h2>Знай наших!</h2>
 		<ul class="worker-list">
-			<li>
-				<div>
-					<h3>Хытыемель Цыэсесенко</h3>
-					<span>Всея кодудер</span>
-				</div>
-				<img src="<?php echo get_template_directory_uri() ?>/images/workers-portrait.jpg" alt="" />
-				<p>Rostrud tionsequat. Met lan et, vullummy num augait incipit vullamet praestrud dunt lore conse con henibh ex ectem alit velisl ex eratue consequatum zzrit duisit irit lut volore ecte exerci te faci ea feui eugait aut lore dolendigna feugiamet ea autpatuero odo dolorem iliquam, velesed del ulputetue modit nisi.</p>
-			</li>
-			<li class="odd-item">
-				<div>
-					<h3>Хытыемель Цыэсесенко</h3>
-					<span>Всея кодудер</span>
-				</div>
-				<img src="<?php echo get_template_directory_uri() ?>/images/workers-portrait.jpg" alt="" />
-				<p>Rostrud tionsequat. Met lan et, vullummy num augait incipit vullamet praestrud dunt lore conse con henibh ex ectem alit velisl ex eratue consequatum zzrit duisit irit lut volore ecte exerci te faci ea feui eugait aut lore dolendigna feugiamet ea autpatuero odo dolorem iliquam, velesed del ulputetue modit nisi.</p>
-			</li>
-			<li>
-				<div>
-					<h3>Хытыемель Цыэсесенко</h3>
-					<span>Всея кодудер</span>
-				</div>
-				<img src="<?php echo get_template_directory_uri() ?>/images/workers-portrait.jpg" alt="" />
-				<p>Rostrud tionsequat. Met lan et, vullummy num augait incipit vullamet praestrud dunt lore conse con henibh ex ectem alit velisl ex eratue consequatum zzrit duisit irit lut volore ecte exerci te faci ea feui eugait aut lore dolendigna feugiamet ea autpatuero odo dolorem iliquam, velesed del ulputetue modit nisi.</p>
-			</li>
-			<li class="odd-item">
-				<div>
-					<h3>Хытыемель Цыэсесенко</h3>
-					<span>Всея кодудер</span>
-				</div>
-				<img src="<?php echo get_template_directory_uri() ?>/images/workers-portrait.jpg" alt="" />
-				<p>Rostrud tionsequat. Met lan et, vullummy num augait incipit vullamet praestrud dunt lore conse con henibh ex ectem alit velisl ex eratue consequatum zzrit duisit irit lut volore ecte exerci te faci ea feui eugait aut lore dolendigna feugiamet ea autpatuero odo dolorem iliquam, velesed del ulputetue modit nisi.</p>
-			</li>
-			<li>
-				<div>
-					<h3>Хытыемель Цыэсесенко</h3>
-					<span>Всея кодудер</span>
-				</div>
-				<img src="<?php echo get_template_directory_uri() ?>/images/workers-portrait.jpg" alt="" />
-				<p>Rostrud tionsequat. Met lan et, vullummy num augait incipit vullamet praestrud dunt lore conse con henibh ex ectem alit velisl ex eratue consequatum zzrit duisit irit lut volore ecte exerci te faci ea feui eugait aut lore dolendigna feugiamet ea autpatuero odo dolorem iliquam, velesed del ulputetue modit nisi.</p>
-			</li>
-			<li class="odd-item">
-				<div>
-					<h3>Хытыемель Цыэсесенко</h3>
-					<span>Всея кодудер</span>
-				</div>
-				<img src="<?php echo get_template_directory_uri() ?>/images/workers-portrait.jpg" alt="" />
-				<p>Rostrud tionsequat. Met lan et, vullummy num augait incipit vullamet praestrud dunt lore conse con henibh ex ectem alit velisl ex eratue consequatum zzrit duisit irit lut volore ecte exerci te faci ea feui eugait aut lore dolendigna feugiamet ea autpatuero odo dolorem iliquam, velesed del ulputetue modit nisi.</p>
-			</li>
+		<?php 
+		 $args = array(
+			'posts_per_page'  => get_category_by_slug('team')->category_count,
+			'category'        => get_category_by_slug('team')->cat_ID,
+		);
+		$posts_array = get_posts( $args ); 
+		$id = 0;
+		foreach ( $posts_array as &$value ) : ?>
+		<li class="<?php echo $id % 2 ? 'odd-item':''; ?>">
+			<div>
+				<h3><?php echo $value->post_title; ?></h3>
+				<span><?php $job = get_post_meta($value->ID, 'job'); echo $job[0]; ?></span>
+			</div>
+			<?php 
+			$thumbnail = get_the_post_thumbnail($value->ID);
+			echo ($thumbnail)?$thumbnail:'<img src="/wp-content/themes/infoshoc/images/workers-portrait.jpg" />'
+			?>
+			<p><?php echo $value->post_content; ?></p>
+		</li>		
+		<?php ++$id; endforeach; unset($value); ?>
 		</ul>
 
 
