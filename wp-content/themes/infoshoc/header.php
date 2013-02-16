@@ -2,7 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title><?php wp_title();?></title>
+<title><?php 
+if ( is_home() ) {
+	echo "GeekHub - отримай практичні знання у сфері IT";
+} else {
+	wp_title( "GeekHub" );
+}
+?></title>
 <?php wp_head() ?>
 </head>
 
