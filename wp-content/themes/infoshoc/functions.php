@@ -14,10 +14,10 @@ function infoshoc_put_navigation(){
 }
 function infoshoc_put_body_class(){
 	if ( is_home() ) {
-		return 'main';
+		return array ( 'main' );
 	}
 	global $post;
-	return $post->post_name;
+	return array ( $post->post_name );
 }
 
 /*STYLES*/

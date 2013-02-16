@@ -3,7 +3,7 @@
 <?php while( have_posts() ) : the_post(); ?>
 <h2><?php the_title() ?></h2>
 <?php if ( has_post_thumbnail() ) the_post_thumbnail(); ?>
-<div class="overflow">
+<div class="page-content">
 <?php the_content() ?>
 </div>
 <?php endwhile; ?>

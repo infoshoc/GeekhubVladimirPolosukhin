@@ -12,7 +12,7 @@ if ( is_home() ) {
 <?php wp_head() ?>
 </head>
 
-<body class="<?php echo infoshoc_put_body_class(); ?>">
+<body <?php body_class(infoshoc_put_body_class()); ?>>
 <div class="wrapper">
 	<div class="header">
 		<h1><a href="/"><img src="<?php echo get_template_directory_uri()?>/images/logo.png" alt="logo" /></a></h1>

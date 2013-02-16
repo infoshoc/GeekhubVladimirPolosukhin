@@ -2,30 +2,33 @@
 
 		<div class="status-block">
 		<?php
-			while ( have_posts() ){
-				the_post(); 
-				if ( $post->post_title == 'register-status' ) {
-					the_content();
-					break;
-				}
+		rewind_posts(); 
+		while ( have_posts() ){
+			the_post(); 
+			if ( $post->post_title == 'register-status' ) {
+				the_content();
+				break;
 			}
+		}
 		?>
 		</div>
 		<p class="description-txt">
 		<?php
-			while ( have_posts() ){
-				the_post(); 
-				if ( $post->post_title == 'description-geekhub' ) {
-					the_content();
-					break;
-				}
+		rewind_posts(); 
+		while ( have_posts() ){
+			the_post(); 
+			if ( $post->post_title == 'description-geekhub' ) {
+				the_content();
+				break;
 			}
+		}
 		?>
 
 		</p>
 		<h2>Наші Курси</h2>
 		<ul class="courses-list">
 		<?php 
+		rewind_posts(); 
 		while ( have_posts() ) : the_post(); 
 			if ( in_category( 3 ) ) : 
 		?>
