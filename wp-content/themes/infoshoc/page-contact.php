@@ -1,5 +1,4 @@
 ﻿<?php get_header() ?>
-
 		<h2>Свяжитесь с нами</h2>
 		<ul>
 			<li class="map-item">
@@ -8,11 +7,11 @@
 			</li>
 			<li>
 				<h3>Звоніть</h3>
-				<span>+38 097 977 01 87</span>
+				<span><?php $telephone = get_post_meta($post->ID, 'telephone'); if ( count($telephone[0]) ) echo $telephone[0]; ?></span>
 			</li>		
 			<li>
 				<h3>Пишіть</h3>
-				<span>info@geekhub.com</span>
+				<span><?php $email = get_post_meta($post->ID, 'email'); if ( count($email[0]) ) echo $email[0]; ?></span>
 			</li>
 			<li>
 				<h3>Слідкуйте</h3>
