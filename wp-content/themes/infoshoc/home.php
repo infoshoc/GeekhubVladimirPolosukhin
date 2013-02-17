@@ -2,47 +2,40 @@
 
 		<div class="status-block">
 		<?php
-		rewind_posts(); 
-		while ( have_posts() ){
-			the_post(); 
-			if ( $post->post_title == 'register-status' ) {
-				the_content();
-				break;
-			}
+		$posts = get_posts(array('name'=>'register-status'));
+		if ( count($posts) ) {
+			echo $posts[0]->post_content;
 		}
 		?>
 		</div>
 		<p class="description-txt">
 		<?php
-		rewind_posts(); 
-		while ( have_posts() ){
-			the_post(); 
-			if ( $post->post_title == 'description-geekhub' ) {
-				the_content();
-				break;
-			}
+		$posts = get_posts(array('name'=>'description-geekhub'));
+		if ( count($posts) ) {
+			echo $posts[0]->post_content;
 		}
 		?>
 		</p>
 		<h2>Наші Курси</h2>
 		<ul class="courses-list">
 		<?php 
-		rewind_posts(); 
-		while ( have_posts() ) : the_post(); 
-			if ( in_category( 3 ) ) : 
+		$category = get_category_by_slug('course');
+		$posts_array = get_posts(array(
+			'posts_per_page'  => $category->category_count,
+			'category'        => $category->cat_ID,
+		)); 
+		foreach($posts_array as &$value) :
 		?>
 				<li>
 					<?php
-					if ( has_post_thumbnail() ) { 
-						the_post_thumbnail();
-					}//if ( has_post_thumbnail() )
+						$thumbnail = get_the_post_thumbnail($value->ID);
+						if ( $thumbnail ) echo $thumbnail;
 					?>
-					<h3><?php the_title() ?></h3>
-					<p><?php the_content() ?></p>
+					<h3><?php echo $value->post_title ?></h3>
+					<p><?php echo $value->post_content ?></p>
 				</li>
-		<?php	
-			endif; //if ( in_category('3') )
-		endwhile; //while ( have_posts() )
+		<?php
+		endforeach;
 		?>
 		</ul>
 		<div class="facebook-widget"></div>

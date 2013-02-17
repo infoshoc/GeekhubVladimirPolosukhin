@@ -1,6 +1,14 @@
 <?php 
 function infoshoc_theme_setup(){
 	add_theme_support( 'post-thumbnails' ); 
+	if ( get_option( 'theme_setup_status' ) == -1 ) {
+		wp_delete_post(1);
+		wp_delete_post(2);
+		wp_delete_post(3);
+		wp_insert_post(array(
+			'post_name'=>'about',
+		));
+	}
 }
 add_action( 'after_setup_theme', 'infoshoc_theme_setup' );
 

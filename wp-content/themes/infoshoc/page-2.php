@@ -3,11 +3,10 @@
 		<h2>Знай наших!</h2>
 		<ul class="worker-list">
 		<?php 
-		 $args = array(
+		$posts_array = get_posts(array(
 			'posts_per_page'  => get_category_by_slug('team')->category_count,
 			'category'        => get_category_by_slug('team')->cat_ID,
-		);
-		$posts_array = get_posts( $args ); 
+		)); 
 		$id = 0;
 		foreach ( $posts_array as &$value ) : ?>
 		<li class="<?php echo $id % 2 ? 'odd-item':''; ?>">
