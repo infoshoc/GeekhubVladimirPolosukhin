@@ -2,11 +2,30 @@
 function infoshoc_theme_setup(){
 	add_theme_support( 'post-thumbnails' ); 
 	if ( get_option( 'theme_setup_status' ) == -1 ) {
-		wp_delete_post(1);
-		wp_delete_post(2);
-		wp_delete_post(3);
-		wp_insert_post(array(
+		for ( $i = 1; $i <= 4; ++$i ) {
+			wp_delete_post($i);
+		}
+		$about_page_id = wp_insert_post(array(
 			'post_name'=>'about',
+			'post_title'=>'Про Geekhub',
+		));
+		$team_page_id = wp_insert_post(array(
+			'post_name'=>'team',
+			'post_title'=>'Команда',
+		));
+		$team_page_id = wp_insert_post(array(
+			'post_name'=>'contact',
+			'post_title'=>'Зв’язок',
+		));
+		add_post_meta($team_page_id, 'telephone', '');
+		add_post_meta($team_page_id, 'email', '');
+		wp_insert_post(array(
+			'post_name'=>'register-status ',
+			'post_title'=>'Статус регистрации',
+		));
+		wp_insert_post(array(
+			'post_name'=>'description-geekhub ',
+			'post_title'=>'Описание GeekHub',
 		));
 	}
 }
