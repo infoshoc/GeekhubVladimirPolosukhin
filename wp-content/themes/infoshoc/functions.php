@@ -1,5 +1,9 @@
 <?php 
 function infoshoc_theme_setup(){
+	/*Nav Menu*/
+	register_nav_menus( array(
+		'header_menu' => 'menu on header',
+	));
 	add_theme_support( 'post-thumbnails' ); 
 	if ( get_option( 'theme_setup_status' ) == -1 ) {
 		for ( $i = 1; $i <= 4; ++$i ) {
@@ -35,10 +39,16 @@ add_action( 'after_setup_theme', 'infoshoc_theme_setup' );
 
 /*NAVIGATION*/
 function infoshoc_put_navigation(){
-	wp_page_menu(array(
+	// wp_page_menu(array(
+		// 'sort_column' => 'ID',
+		// 'show_home' => 'Головна',
+		// 'menu_class' => 'navigation',
+	// ));
+	wp_nav_menu (array( 
+		'menu'=>'header_menu',
+		'menu_class'=>'navigation',
+		'container'=>false,
 		'sort_column' => 'ID',
-		'show_home' => 'Головна',
-		'menu_class' => 'navigation',
 	));
 }
 function infoshoc_put_body_class(){
