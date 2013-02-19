@@ -28,6 +28,8 @@ function infoshoc_theme_setup(){
 			'post_title'=>'Описание GeekHub',
 		));
 	}
+	/*STYLES*/
+	add_action( 'wp_enqueue_scripts', 'infoshoc_enqueue_styles' );
 }
 add_action( 'after_setup_theme', 'infoshoc_theme_setup' );
 
@@ -47,8 +49,6 @@ function infoshoc_put_body_class(){
 	return array ( $post->post_name );
 }
 
-/*STYLES*/
-add_action( 'wp_enqueue_scripts', 'infoshoc_enqueue_styles' );
 function infoshoc_enqueue_styles(){
 	wp_register_style ( 'content', get_template_directory_uri() . '/styles/content.css' );
 	wp_register_style ( 'default', get_template_directory_uri() . '/styles/default.css' );
