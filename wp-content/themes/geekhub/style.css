@@ -1,0 +1,410 @@
+﻿/*
+Theme Name: Geekhub's theme
+Theme URI: http://google.com/
+Description: Second Theme
+Author: Infoshoc
+Author URI: http://google.com/
+Version: 1.0
+*/
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------RESET----------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+html,body                       { width:100%; height:100%; }
+body                            { padding:0; margin:0; font:15px Arial, sans-serif; background:#fff; color:#4c7689; }
+div,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,fieldset,label,select,checkbox,input,textarea {
+	padding:0;
+	margin:0;
+	outline:none;
+	list-style:none;
+}
+select, input, textarea        { font-size:12px; vertical-align:middle; }
+textarea                       { vertical-align:top; }
+:focus                         { outline:none; }
+input[type=submit]             { cursor:pointer; }
+img, fieldset                  { border:0; }
+table                          { border-collapse:collapse; border-spacing:0; }
+a:link, a:visited              { font:15px Arial, sans-serif; color:#e21d5d; text-decoration:none; }
+a:hover                        { text-decoration: underline; }
+/*----------------------------------------------------------------------------------*/
+/*--------------------------------------DEFAULT-------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.float-r           	           { float:right !important; }
+.float-l                       { float:left !important; }
+.no-float                      { float:none !important; }
+.no-border                     { border:0 !important; }
+.no-bg                         { background:none !important; }
+.no-margin                     { margin:0 !important; }
+.no-padding                    { padding:0 !important; }
+.no-display                    { display:none !important; }
+.display                       { display:block !important; }
+.inline                        { display:inline !important; }
+.overflow                      { overflow:hidden !important; }
+.align-r                       { text-align:right !important; }
+.align-l                       { text-align:left !important; }
+.align-c                       { text-align:center !important; }
+.clear                         { clear:both; }
+/*----------------------------------------------------------------------------------*/
+/*--------------------------------------WRAPPER-------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+body {
+	background: url(images/header-bg.jpg) 0 -334px repeat-x;
+}
+.main {
+	background: url(images/header-bg.jpg) top left repeat-x;
+}
+
+.wrapper {
+	width: 900px;
+	margin: 0 auto;
+}
+/*----------------------------------------------------------------------------------*/
+/*--------------------------------------CONTENT-------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.content {
+	overflow: hidden;
+}
+.content .description-txt {
+	line-height: 22px;
+}
+.main .content h2 {
+	margin: 0 0 25px;
+	border-bottom: 1px solid #A7C3CF;
+	padding: 25px 0 10px;
+	text-align: center;
+	font-family: "Trebuchet MS", sans-serif;
+	font-size: 19px;
+	color: #437183;
+}
+.content h2 {
+	border-bottom: 1px solid #A7C3CF;
+	padding: 25px 0 20px;
+	text-align: left;
+	font: normal 52px "PT Sans", sans-serif;
+	color: #4B7589;
+}
+.content ul {
+	overflow: hidden;
+}
+.content h3 {
+	overflow: hidden;
+	font-size: 28px;
+	font-family: "Trebuchet MS", sans-serif;
+	color: #E92777;
+}
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------STATUS-BLOCK------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.content .register-link  {
+	display: block;
+	margin: 30px auto 0;
+	width: 307px; height: 78px;
+	background: url(images/register-btn.png);
+}
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------COURSES-LIST------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.courses-list {
+	overflow: hidden;
+	margin: 0 -29px 50px;;
+}
+.courses-list li {
+	float: left;
+	overflow: hidden;
+	margin: 0 28px 30px;
+	width: 44%;
+	min-height: 170px;
+}
+.courses-list h3 {
+	padding: 0 0 10px;
+	font-weight: normal;
+}
+.courses-list img {
+	float: left;
+	margin: 0 20px 0 0;
+}
+.courses-list p {
+	overflow: hidden;
+	line-height: 18px;
+	font-size: 13px;
+	color: #4B7589;
+}
+/*----------------------------------------------------------------------------------*/
+/*-----------------------------------WORKER-LIST------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.worker-list li {
+	overflow: hidden;
+	padding: 15px 35px 0;
+}
+.worker-list div {
+	float: left;
+	padding: 45px 0 0;
+	width: 170px;
+	text-align: right;
+}
+.worker-list .odd-item div{
+	float: right;
+	text-align: left;
+}
+.worker-list h3{
+	color: #E92777;
+	font-size: 28px;
+	font-weight: normal;
+}
+.worker-list span{
+	color: #F2753D;
+	font-size: 13px;
+}
+.worker-list img {
+	float: left;
+	padding: 0 20px;
+}
+.worker-list .odd-item img{
+	float: right;
+}
+.worker-list p{
+	overflow: hidden;
+	padding: 40px 0 0;
+	color: #4B7589;
+	font-size: 15px;
+}
+.worker-list .odd-item p{
+	text-align: right;
+}
+
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------CONTACT--------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.map-item {
+	padding: 0 0 0 35px;
+}
+.map-item iframe {
+	border: none;
+	width: 382px;
+	height: 287px;
+	padding: 17px;
+	background:  url(images/map-img.jpg) no-repeat;
+}
+.contact .content ul {
+	text-align: center;
+	font-size: 33px;
+	font-family: "Trebuchet MS", sans-serif;
+}
+.contact .content > ul > li {
+	overflow: hidden;
+	margin: 35px 0 0;
+}
+.contact .content ul .map-item {
+	float: left;
+	margin: 15px 0 0;
+}
+.contact .content ul h3 {
+	margin: 0 0 15px;
+}
+/*----------------------------------------------------------------------------------*/
+/*-----------------------------------SOCIAL-LIST------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.content .social-list {
+	overflow: hidden;
+	width: 178px;
+	margin: 0 auto;
+}
+.content .social-list li {
+	float: left;
+	margin: 0 17px 0 0;
+}
+.social-list a {
+	display: block;
+	width: 48px; height: 48px;
+	color: transparent;
+	background-image: url(images/contact--social-icons-spirit.png);
+}
+.content .social-list .twitter-item { margin: 0; }
+.content .social-list .facebook-item a { background-position: left top; } .content .social-list .facebook-item a:hover { background-position: left bottom; }
+.content .social-list .vkontakte-item a { background-position: center top; } .content .social-list .vkontakte-item a:hover { background-position: center bottom; }
+.content .social-list .twitter-item a { background-position: right top; } .content .social-list .twitter-item a:hover { background-position: right bottom; }
+/*----------------------------------------------------------------------------------*/
+/*--------------------------------------ABOUT---------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.about .content {
+	margin: 0 0 -45px;
+}
+.about .content h2 {
+	margin: 0 0 40px;
+}
+.about .content img {
+	margin: 0 0 0 35px;
+}
+.about .content p {
+	margin: 0 35px 25px;
+}
+/*----------------------------------------------------------------------------------*/
+/*--------------------------------------WIDGET--------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.vkontakte-widget {	
+	float: left;
+	margin: 20px 40px 0 0;
+	width: 267px; height: 197px;
+	background: url(images/vkontakte-widget.jpg);
+}
+.certificates-registery-link {
+	display: block;
+	float: left;
+	margin: 0 40px 0 0;
+	width: 269px; height: 214px;
+	background: url(images/certificates-registery-img.jpg);
+}
+/*----------------------------------------------------------------------------------*/
+/*--------------------------------------SPONSOR-------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+h3.sponsors-header {
+	border-bottom: 1px solid #AEC2CE;
+	padding: 10px 0 10px;
+	margin: 0 0 25px;
+	letter-spacing: 8px;
+	text-transform: uppercase;
+	text-align: center;
+	font: normal 17px "Trebuchet MS", sans-serif;
+	color:#437183;	
+}
+.sponsors-list {
+	overflow: hidden;
+	padding: 0 0 0 5px;
+}
+.sponsors-list li{
+	float: left;
+	margin: 0 17px 10px 0;
+	height: 54px;
+}
+.sponsors-list .yothog-item {
+	margin: 0 17px 0 50px;
+}
+.sponsors-list li a {
+	display: block;
+	background-position: bottom;
+}
+.sponsors-list li a:hover{
+	background-position: top;
+}
+.house-of-gospel-item a{
+	background-image: url(images/house-of-gospel-logo.jpg);
+	width: 69px; height: 54px;
+}
+.master-of-code-item a{
+	background-image: url(images/master-of-code-logo.jpg);
+	width: 72px; height: 39px;
+}
+.sergium-item a{
+	background-image: url(images/sergium-logo.jpg);
+	width: 44px; height: 44px;
+}
+.yothog-item a{
+	background-image: url(images/yothog-logo.jpg);
+	width: 59px; height: 44px;
+}
+._5-s-item a{
+	background-image: url(images/5-logo.jpg);
+	width: 59px; height: 47px;
+}
+/*----------------------------------------------------------------------------------*/
+/*--------------------------------------FOOTER--------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.footer {
+	margin: 60px 0 0;
+	border-top: 1px solid #A7C3CF;
+	padding: 18px 0 80px;
+}
+/*----------------------------------------------------------------------------------*/
+/*------------------------------------COPYRIGHT-------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.footer>p {
+	float: right;
+	font-size: 11px;
+	color: #A7C3CF;
+}
+/*----------------------------------------------------------------------------------*/
+/*-----------------------------------NAVIGATION-------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.footer .navigation {
+	overflow: hidden;
+}
+.footer .navigation li {
+	padding: 0 21px 0 0;
+}
+.footer .navigation a{
+	font-size: 11px;
+}
+.footer .navigation .current_page_item  a {
+	color: #F85B4E;
+}
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------HEADER---------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.header {
+	overflow: hidden;
+}
+.main .header .top-bar  {
+	border-bottom: 1px solid #95A7B1;
+}
+
+h1 {
+	float: left;
+	padding: 19px 0 17px;
+}
+.header .status-block {
+	margin: 0 auto 37px;
+	padding: 75px 0 0;
+	width: 670px;
+	min-height: 267px;
+	background: url(images/status-bg.png) center bottom no-repeat;
+	font: bold 39px "Trebuchet MS", sans-serif;
+	text-align: center;
+	line-height: 60px;
+}
+/*----------------------------------------------------------------------------------*/
+/*------------------------------------SOCIAL----------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.header .social-list {
+	overflow: hidden;	
+	padding: 45px 86px 39px 93px;
+}
+.header .social-list li {
+	float: left;
+	padding: 0 9px 0 0;
+}
+.header .social-list li a {
+	display: block;
+	width: 23px; height: 23px;
+}
+.header .social-list .facebook-item a {background: url(images/social-icons-spirit.png);} .header .social-list .facebook-item a:hover {background-position: 0 bottom;}
+.header .social-list .vkontakte-item a {background: url(images/social-icons-spirit.png) -23px top;} .header .social-list .vkontakte-item a:hover {background-position: -23px bottom;}
+.header .social-list .twitter-item a {background: url(images/social-icons-spirit.png) -46px top;} .header .social-list .twitter-item a:hover {background-position: -46px bottom;}
+.header .social-list .youtube-item a {background: url(images/social-icons-spirit.png) -69px top;} .header .social-list .youtube-item a:hover {background-position: -69px bottom;}
+.header .social-list .vimeo-item a {background: url(images/social-icons-spirit.png) -92px top;} .header .social-list .vimeo-item a:hover {background-position: -92px bottom;}
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------NAVIGATION--------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.header .navigation {
+	float: right;
+	overflow: hidden;	
+	padding: 47px 0 0;
+}
+.navigation li {
+	float: left;
+	padding: 0 0 0 27px;
+}
+.navigation a {
+	text-transform: uppercase;
+	font-family: "PT Sans", sans-serif;
+	font-weight: bold;
+	color: #396375;
+}
+.header .navigation .current_page_item  {
+	background: url(images/header-active-arrow.png) center bottom no-repeat;
+	height: 70px;
+}
+.main .header .navigation .current_page_item  {
+	background: none;
+}
+.header .navigation .current_page_item  a {
+	color: #e21d5d;
+}
