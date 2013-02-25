@@ -16,9 +16,28 @@
 			<li>
 				<h3>Слідкуйте</h3>
 				<ul class="social-list">
-					<li class="facebook-item"><a href="#"></a></li>
+				<?php	
+					$follow_category = get_category_by_slug('follow');
+					if ( $follow_category !== false ) : 
+						$follow_posts = get_posts(array(
+							'posts_per_page' => $follow_category->count,
+							'category' => $follow_category->term_id,
+						));
+						foreach ( $follow_posts as $idx => $current_post ) : 
+				?>
+						<li class="<?php 
+							if ( $idx + 1 == $follow_category->count ) echo 'no-margin ';
+							echo $current_post->post_title; 
+						?>-item"><a href="<?php echo $current_post->post_content; ?>"></a></li>
+				<?php	
+						endforeach; 
+				?>
+				<?php
+					endif;
+				?>
+					<!-- <li class="facebook-item"><a href="#"></a></li>
 					<li class="vkontakte-item"><a href="#"></a></li>
-					<li class="twitter-item"><a href="#"></a></li>
+					<li class="twitter-item"><a href="#"></a></li>-->
 				</ul>
 			</li>			
 		</ul>

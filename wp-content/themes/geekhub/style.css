@@ -218,7 +218,6 @@ body {
 	color: transparent;
 	background-image: url(images/contact--social-icons-spirit.png);
 }
-.content .social-list .twitter-item { margin: 0; }
 .content .social-list .facebook-item a { background-position: left top; } .content .social-list .facebook-item a:hover { background-position: left bottom; }
 .content .social-list .vkontakte-item a { background-position: center top; } .content .social-list .vkontakte-item a:hover { background-position: center bottom; }
 .content .social-list .twitter-item a { background-position: right top; } .content .social-list .twitter-item a:hover { background-position: right bottom; }
